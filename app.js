@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const port = process.env.PORT || 3000;
 const OAuthRoute = require('./routes/index');
+const TransactionRoute = require('./routes/transaction');
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(OAuthRoute);
+app.use(TransactionRoute);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
