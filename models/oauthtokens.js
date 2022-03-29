@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   OAuthTokens.init(
     {
-      accesstoken: DataTypes.STRING,
-      accessTokesExpiresAt: DataTypes.DATE,
+      accessToken: DataTypes.STRING,
+      accessTokenExpiresAt: DataTypes.DATE,
       refreshToken: DataTypes.STRING,
       refreshTokenExpiresAt: DataTypes.DATE,
       clientId: DataTypes.INTEGER,

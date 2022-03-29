@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       clientId: DataTypes.STRING,
       clientSecret: DataTypes.STRING,
       redirectUris: DataTypes.STRING,
-      grants: DataTypes.ARRAY,
+      grants: DataTypes.ARRAY(DataTypes.STRING),
     },
     {
       sequelize,

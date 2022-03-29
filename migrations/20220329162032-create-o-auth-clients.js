@@ -6,31 +6,31 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       clientId: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       clientSecret: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       redirectUris: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       grants: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING),
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('OAuthClients');
-  }
+  },
 };

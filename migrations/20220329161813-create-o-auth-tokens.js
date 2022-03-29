@@ -6,37 +6,37 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
-      accesstoken: {
-        type: Sequelize.STRING
+      accessToken: {
+        type: Sequelize.STRING,
       },
-      accessTokesExpiresAt: {
-        type: Sequelize.DATE
+      accessTokenExpiresAt: {
+        type: Sequelize.DATE,
       },
       refreshToken: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       refreshTokenExpiresAt: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       clientId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('OAuthTokens');
-  }
+  },
 };
